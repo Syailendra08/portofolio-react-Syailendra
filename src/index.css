@@ -1,19 +1,19 @@
 /* index.css */
 
-/* --- Reset & Global --- */
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif; /* Ganti dengan font yang kamu suka, misal Poppins, Inter, dll */
+  font-family: Arial, sans-serif; 
 }
 
 :root {
-  --primary-color: #2D3A4B; /* Warna gelap header/tombol */
-  --accent-color: #1A73E8; /* Warna biru untuk nama/link */
+  --primary-color: #2D3A4B; 
+  --accent-color: #1A73E8; 
   --bg-color: #FFFFFF;
   --text-color: #333333;
-  --placeholder-color: #E0E0E0; /* Lingkaran abu-abu */
+  --placeholder-color: #E0E0E0; 
 }
 
 body {
@@ -22,7 +22,7 @@ body {
   line-height: 1.6;
 }
 
-/* --- Utility Classes --- */
+
 .container {
   width: 90%;
   max-width: 1200px;
@@ -38,9 +38,9 @@ body {
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  width: 100%; /* Default mobile, tombol lebar penuh */
+  width: 100%; 
   text-align: center;
-  margin-bottom: 15px; /* Spasi antar tombol di mobile */
+  margin-bottom: 15px; 
 }
 
 .btn-primary {
@@ -52,13 +52,11 @@ body {
   background-color: #405060;
 }
 
-/* --- STYLING MOBILE (Default) --- */
 
-/* Header & Navbar */
 header {
   background-color: var(--bg-color);
   padding: 20px 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Sedikit bayangan */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
 }
 
 .navbar {
@@ -103,15 +101,15 @@ header {
   border-radius: 2px;
 }
 
-/* Bagian Menu Navigasi (Disembunyikan di Mobile secara default) */
+
 .nav-links {
   display: none;
 }
 
-/* Hero Section */
+
 .hero {
   padding: 60px 0;
-  text-align: center; /* Rata tengah di mobile */
+  text-align: center; 
 }
 
 .status-badge {
@@ -337,7 +335,7 @@ footer {
   font-size: 0.95rem;
 }
 
-/* Contact Info */
+
 .contact-info-list {
   margin-top: 30px;
   display: flex;
@@ -368,17 +366,17 @@ footer {
   aspect-ratio: 4 / 3;
   background-color: #E0E0E0;
   border-radius: 8px;
-  overflow: hidden; /* Tambahkan ini agar gambar tidak keluar dari radius */
+  overflow: hidden; 
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Styling utama agar gambar pas di dalam kotak */
+
 .image-placeholder img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ini kunci agar gambar memenuhi kotak tanpa gepeng */
+  object-fit: cover; 
   display: block;
 }
 
@@ -431,7 +429,7 @@ footer {
   color: white;
 }
 
-/* Gradient Helper Classes */
+
 .orange-pink { background: linear-gradient(to right, #f97316, #ec4899); }
 .yellow-amber { background: linear-gradient(to right, #eab308, #f59e0b); }
 .cyan-blue { background: linear-gradient(to right, #06b6d4, #3b82f6); }
@@ -445,12 +443,12 @@ footer {
 }
 
 .skill-info {
-  width: 100%; /* Memaksa area teks & bar memenuhi lebar kartu */
+  width: 100%; 
   display: flex;
   flex-direction: column;
 }
 
-/* Progress Bar */
+
 .skill-bar-container {
   width: 100%; 
   display: flex;
@@ -478,6 +476,24 @@ footer {
   font-weight: 600;
   color: #64748b;
   min-width: 35px;
+}
+
+.cert-section { padding: 60px 0; background-color: #fff; }
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.cert-card {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  overflow: hidden;
+  text-align: left;
+  transition: 0.3s;
 }
 
 

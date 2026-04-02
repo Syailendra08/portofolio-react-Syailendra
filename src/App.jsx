@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './index.css';
 import profilePic from './assets/profilePic.jpeg';
-import { LuMail, LuMapPin, LuPhoneCall } from 'react-icons/lu';
+import { LuChevronLeft, LuChevronRight, LuMail, LuMapPin, LuPhoneCall } from 'react-icons/lu';
 import aboutMe from './assets/about.png';
 import SkillCard from './components/SkillCard';
 import { Code2, Cpu, Palette, Terminal } from 'lucide-react';
+import CertificateCard from './components/CertificateCard';
 
 const LogoS = () => <div className="logo-container">S</div>;
 const skillsData = [
@@ -14,7 +15,19 @@ const skillsData = [
   { name: 'Problem Solving', level: 88, icon: <Cpu size={20} />, color: 'purple-violet' },
 ];
 
+const certData = [
+  { id: 1, title: "Best Team Capstone", issuer: "DBS Foundation", date: "May 2025", description: "Flora AI finished as Top 15th Best Team.", image: "link_gambar_1" },
+  // ... Tambahkan sampai 8 atau 12 data untuk ngetes pagination
+];
+
 function App() {
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 6;
+
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = certData.slice(indexOfFirstItem, indexOfLastItem);
+  const totalPages = Math.ceil(certData.length / itemsPerPage);
   return (
     <div className="App">
       <header>
@@ -179,6 +192,44 @@ function App() {
           {skillsData.map((skill, index) => (
             <SkillCard key={index} {...skill} />
           ))}
+        </div>
+      </div>
+    </section>
+
+    <section id="certificates" className="cert-section">
+      <div className="container">
+        <div className="skills-header">
+           <div className="about-badge"><span>Achievements</span></div>
+           <h2 className="skills-title">My <span className="blue-text">Certificates</span></h2>
+           <p className="skills-subtitle">A collection of certifications I've earned.</p>
+        </div>
+
+        
+        <div className="cert-grid">
+          {currentItems.map((cert) => (
+            <CertificateCard key={cert.id} {...cert} />
+          ))}
+        </div>
+
+        {/* Pagination Controls */}
+        <div className="pagination">
+          <button 
+            onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+            disabled={currentPage === 1}
+            className="pag-btn"
+          >
+            <LuChevronLeft />
+          </button>
+          
+          <span className="page-info">Pages {currentPage} of {totalPages}</span>
+
+          <button 
+            onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+            disabled={currentPage === totalPages}
+            className="pag-btn"
+          >
+            <LuChevronRight />
+          </button>
         </div>
       </div>
     </section>
