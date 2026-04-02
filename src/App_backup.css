@@ -1,0 +1,53 @@
+html {
+  scroll-behavior: smooth;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background: #1e293b;
+  color: white;
+  padding: 15px;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+section {
+  padding: 40px;
+}
+
+.card {
+  background: #f1f5f9;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+}
+
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+}
+
+input, textarea {
+  margin: 5px 0;
+  padding: 8px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+}
