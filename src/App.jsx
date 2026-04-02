@@ -3,8 +3,16 @@ import './index.css';
 import profilePic from './assets/profilePic.jpeg';
 import { LuMail, LuMapPin, LuPhoneCall } from 'react-icons/lu';
 import aboutMe from './assets/about.png';
+import SkillCard from './components/SkillCard';
+import { Code2, Cpu, Palette, Terminal } from 'lucide-react';
 
 const LogoS = () => <div className="logo-container">S</div>;
+const skillsData = [
+  { name: 'HTML & CSS', level: 90, icon: <Palette size={20} />, color: 'orange-pink' },
+  { name: 'JavaScript', level: 85, icon: <Terminal size={20} />, color: 'yellow-amber' },
+  { name: 'React JS', level: 80, icon: <Code2 size={20} />, color: 'cyan-blue' },
+  { name: 'Problem Solving', level: 88, icon: <Cpu size={20} />, color: 'purple-violet' },
+];
 
 function App() {
   return (
@@ -94,7 +102,7 @@ function App() {
         <section id="about" className="about-section">
       <div className="container about-wrapper">
         
-        {/* Kolom Gambar (Kiri di Desktop) */}
+       
         <div className="about-image-column">
           <div className="image-box">
             <div className="image-placeholder">
@@ -107,7 +115,7 @@ function App() {
           </div>
         </div>
 
-        {/* Kolom Teks (Kanan di Desktop) */}
+        
         <article className="about-text-column">
           <div className="about-badge">
             <span className="status-dot"></span>
@@ -151,6 +159,27 @@ function App() {
           </div>
         </article>
 
+      </div>
+    </section>
+
+    <section id="skills" className="skills-section">
+      <div className="container">
+        <div className="skills-header">
+          <div className="about-badge">
+             <span className="status-dot"></span>
+             <span>My Expertise</span>
+          </div>
+          <h2 className="skills-title">Skills & <span className="blue-text">Technologies</span></h2>
+          <p className="skills-subtitle">
+            Here are the technologies and skills I've mastered throughout my learning journey.
+          </p>
+        </div>
+
+        <div className="skills-grid">
+          {skillsData.map((skill, index) => (
+            <SkillCard key={index} {...skill} />
+          ))}
+        </div>
       </div>
     </section>
       </main>

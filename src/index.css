@@ -382,6 +382,104 @@ footer {
   display: block;
 }
 
+.skills-section {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.skills-header {
+  margin-bottom: 50px;
+}
+
+.skills-subtitle {
+  color: #666;
+  max-width: 600px;
+  margin: 10px auto;
+}
+
+/* Grid System */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+/* Card Styling */
+.skill-card {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 16px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+}
+
+.skill-icon-wrapper {
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: white;
+}
+
+/* Gradient Helper Classes */
+.orange-pink { background: linear-gradient(to right, #f97316, #ec4899); }
+.yellow-amber { background: linear-gradient(to right, #eab308, #f59e0b); }
+.cyan-blue { background: linear-gradient(to right, #06b6d4, #3b82f6); }
+.purple-violet { background: linear-gradient(to right, #a855f7, #7c3aed); }
+
+.skill-name {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #1e293b;
+  margin-bottom: 12px;
+}
+
+.skill-info {
+  width: 100%; /* Memaksa area teks & bar memenuhi lebar kartu */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Progress Bar */
+.skill-bar-container {
+  width: 100%; 
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+.skill-bar-bg {
+  flex: 1;
+  height: 8px;
+  background: #E2E8F0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 1s ease-in-out;
+}
+
+.skill-percentage {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #64748b;
+  min-width: 35px;
+}
+
 
 /* --- MEDIA QUERY UNTUK DESKTOP (Min-width: 768px atau 992px) --- */
 @media (min-width: 992px) {
@@ -480,6 +578,6 @@ footer {
 
   .experience-card {
     bottom: 20px;
-    right: -30px; /* Card agak keluar dari gambar seperti di desain */
+    right: -30px; 
   }
 }
