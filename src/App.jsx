@@ -8,6 +8,7 @@ import {  Cpu, Palette, Star, } from 'lucide-react';
 import CertificateCard from './components/CertificateCard';
 import { IoLogoJavascript } from 'react-icons/io';
 import { FaReact } from 'react-icons/fa';
+import Contact from './components/Contact';
 
 const LogoS = () => <div className="logo-container">S</div>;
 const skillsData = [
@@ -34,7 +35,7 @@ const certData = [
   { id: 14, title: "Best Team Capstone Coding Camp 2025 powered by DBS Foundation - Front-End & Back-End Developer", issuer: "Dicoding X DBS Foundation", date: "2 May 2025", description: "Flora AI finished as Top 15th Best Team Cohort Coding Camp powered by DBS Foundation. Jan 2025-Apr 2025. 4 mos West Java, Indonesia, Remote", image: "https://is3.cloudhost.id/disk4pps-wk/jurnalku/certificates/certificate_1758074941_68ca183d0f98d.jpg" },
     { id: 15, title: "Belajar Dasar Data Science", issuer: "Dicoding Indonesia", date: "22 Jan 2026", description: "Dicoding Indonesia Issued Jan 2026 · Expires Jan 2029 Credential ID MRZM6956RPYQ", image: "https://is3.cloudhost.id/disk4pps-wk/jurnalku/certificates/certificate_1775322295_69d144b7dbc86.png" },
   { id: 16, title: "Belajar Dasar Structured Query Language (SQL)", issuer: "Dicoding Indonesia", date: "22 Jan 2026", description: "Dicoding Indonesia Issued Jan 2026 · Expires Jan 2029 Credential ID 72ZDKGQMVPYW Skill: SQL", image: "https://is3.cloudhost.id/disk4pps-wk/jurnalku/certificates/certificate_1775322561_69d145c11c200.png" },
-  // ... Tambahkan sampai 8 atau 12 data untuk ngetes pagination
+ 
 ];
 
 function App() {
@@ -228,7 +229,7 @@ function App() {
           ))}
         </div>
 
-        {/* Pagination Controls */}
+        
         <div className="pagination">
           <button 
             onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
@@ -249,6 +250,10 @@ function App() {
           </button>
         </div>
       </div>
+    </section>
+
+    <section>
+      <Contact />
     </section>
       </main>
 
