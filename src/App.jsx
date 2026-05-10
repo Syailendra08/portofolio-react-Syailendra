@@ -9,6 +9,9 @@ import CertificateCard from './components/CertificateCard';
 import { IoLogoJavascript } from 'react-icons/io';
 import { FaReact } from 'react-icons/fa';
 import Contact from './components/Contact';
+import { projects } from "./data/projects";
+import ProjectCard from "./components/ProjectCard";
+
 
 const LogoS = () => <div className="logo-container">S</div>;
 const skillsData = [
@@ -251,6 +254,14 @@ function App() {
         </div>
       </div>
     </section>
+
+    <section className="projects-section">
+  <div className="projects-grid">
+    {projects.map((project) => (
+      <ProjectCard key={project.id} {...project} />
+    ))}
+  </div>
+</section>
 
     <section>
       <Contact />

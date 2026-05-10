@@ -1,0 +1,237 @@
+/* =========================
+   PROJECT LAYOUT
+========================= */
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.projects-section {
+  padding: 100px 0;
+}
+
+.projects-grid {
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* =========================
+   CARD GROUP
+========================= */
+
+.project-card-group {
+  width: 400px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  margin-bottom: 20px;
+}
+
+.project-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 16px;
+  font-weight: 700;
+  color: #6b7280;
+}
+
+.project-line {
+  width: 30px;
+  height: 2px;
+  background: #9ca3af;
+}
+
+.project-title {
+  font-size: 40px;
+  line-height: 0.95;
+  font-weight: 900;
+  color: #0f172a;
+
+  margin-top: 10px;
+}
+
+/* =========================
+   GITHUB BUTTON
+========================= */
+
+.github-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  background: #334155;
+  color: white;
+
+  padding: 12px 18px;
+  border-radius: 999px;
+
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+
+  opacity: 0;
+  transform: translateY(10px);
+
+  transition: 0.35s ease;
+}
+
+.project-card-group:hover .github-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   MAIN CARD
+========================= */
+
+.project-card {
+  border-radius: 26px;
+  border: 6px solid #243447;
+
+  overflow: hidden;
+
+  padding-top: 8px;
+}
+
+/* =========================
+   GRADIENTS
+========================= */
+
+.project-card.orange {
+  background: linear-gradient(
+    to bottom right,
+    #E86202,
+    
+    #F2AF07
+  );
+}
+
+.project-card.green {
+  background: linear-gradient(
+    to bottom right,
+    #02B64C,
+   
+    #02AC71
+  );
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.project-description {
+  color: rgba(255, 255, 255, 0.932);
+  font-size: 16px;
+  font-weight: bold;
+
+  padding:  20px;
+  margin-bottom: 40px;
+}
+
+/* =========================
+   MAC FRAME
+========================= */
+
+.mac-wrapper {
+  padding: 0;
+}
+
+.mac-frame {
+  background: white;
+
+  border-radius: 10px 10px 0 0;
+
+  overflow: hidden;
+
+  margin: 0 40px ;
+
+  transition: transform 0.5s ease;
+}
+
+.mac-wrapper:hover .mac-frame {
+  transform: scale(1.04);
+}
+
+/* =========================
+   MAC TOPBAR
+========================= */
+
+.mac-topbar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 6px 10px;
+
+  background: #242424;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+}
+
+.red {
+  background: #f87171;
+}
+
+.yellow {
+  background: #facc15;
+}
+
+.green {
+  background: #4ade80;
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.project-image {
+  width: 100%;
+  height: 200px;
+
+  object-fit: cover;
+  display: block;
+
+  transition: transform 0.5s ease;
+}
+
+.project-card-group:hover .project-image {
+  transform: scale(1.00);
+}
+
+/* =========================
+   TECH STACK
+========================= */
+
+.tech-stack {
+  display: flex;
+  gap: 10px;
+
+  margin-top: 14px;
+}
+
+.tech-badge {
+  background: #243447;
+  color: white;
+
+  padding: 7px 14px;
+  border-radius: 999px;
+
+  font-size: 11px;
+  font-weight: 600;
+}
